@@ -28,7 +28,6 @@ public class Bird : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // 새죽음.

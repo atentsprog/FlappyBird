@@ -66,6 +66,7 @@
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollX.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RePosition.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnSpawner.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

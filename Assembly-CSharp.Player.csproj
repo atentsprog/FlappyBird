@@ -57,7 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
+    <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
+    <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
+    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
+    <Compile Include="Assets\Scripts\Common\TimeController.cs" />
+    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
+    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollX.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RePosition.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

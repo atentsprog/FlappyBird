@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{E3EF6E53-88BE-20EB-65C7-C65330B49779}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -69,8 +70,8 @@
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
-     <None Include="Assets\Free Asset - 2D Handcrafted Art\Readme.txt" />
+    <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
+    <None Include="Assets\Free Asset - 2D Handcrafted Art\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

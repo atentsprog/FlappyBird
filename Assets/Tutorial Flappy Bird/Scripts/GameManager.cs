@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameOverUI;
     public Text scoreUI;
+    public float scrollSpeedXMultiply = 1;
 
     private void Awake()
     {

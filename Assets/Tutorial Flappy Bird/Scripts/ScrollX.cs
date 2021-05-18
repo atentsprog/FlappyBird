@@ -1,4 +1,4 @@
-using System.Collections;
+锘縰sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +8,11 @@ public class ScrollX : MonoBehaviour
 
     void Update()
     {
-        // 规过1
-        transform.Translate(speedX * Time.deltaTime, 0, 0);
+        // 氚╇矔1
+        transform.Translate(speedX * GameManager.instace.scrollSpeedXMultiply
+            * Time.deltaTime, 0, 0);
 
-        //// 规过2
+        //// 氚╇矔2
         //var pos = transform.position;
         //pos.x += speedX * Time.deltaTime;
         //transform.position = pos;

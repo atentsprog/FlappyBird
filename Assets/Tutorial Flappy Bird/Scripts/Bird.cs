@@ -35,15 +35,22 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        OnDie(collision);
+    }
+
+    protected void OnDie(Collision2D collision)
+    {
         Debug.LogWarning(collision);
         // 새죽음.
-        //죽는 애니메이션 하자.
 
         //게임 오버 UI표시
         GameManager.instace.SetGameOver();
 
-        // 스크롤 하는것들 다 멈추기
+        //죽는 애니메이션 하자.
         animator.Play("Die", 0, 0);
+
+        // 스크롤 하는것들 다 멈추기
+        GameManager.instace.scrollSpeedXMultiply = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -10,14 +10,16 @@ public class ColumnManager : MonoBehaviour
     {
         public GameObject trap;
         public float ratio;
+        public float randomYmin;
+        public float randomYmax;
     }
+
     public List<TrapInfo> traps;
 
     public float spawnDelay = 3;
     public float spawnDelayRandom = 1;
-    public float spawnX = 10f;
-    public float spawnYmin = -1.62f;
-    public float spawnYmax = 3.46f;
+    public float spawnXPosition = 10f;
+
     IEnumerator Start()
     {
         while(GameManager.instance.gameover == false)
@@ -26,7 +28,7 @@ public class ColumnManager : MonoBehaviour
             TrapInfo newTrap = GetNewTrapInfo();
 
             // 기둥 스폰(생성).
-            Instantiate(newTrap.trap, new Vector3(spawnX, Random.Range(spawnYmin, spawnYmax), 0), newTrap.trap.transform.rotation);
+            Instantiate(newTrap.trap, new Vector3(spawnXPosition, Random.Range(newTrap.randomYmin, newTrap.randomYmax), 0), newTrap.trap.transform.rotation);
 
             yield return new WaitForSeconds(spawnDelay + Random.Range(-spawnDelayRandom, spawnDelayRandom));
         }

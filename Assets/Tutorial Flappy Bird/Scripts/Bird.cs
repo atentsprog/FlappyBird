@@ -18,6 +18,7 @@ public class Bird : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
+<<<<<<< HEAD
             if (Time.time > 0.7f)
             {
                 Vector2 force;
@@ -26,6 +27,14 @@ public class Bird : MonoBehaviour
                 //rigidbody2D // 낙하중 -> 멈추고 나서 -> 힘을 줘야지 force적용됨
                 rigidbody2D.velocity = Vector2.zero;// new Vector2(0, 0);
                 rigidbody2D.AddForce(force);
+=======
+            Vector2 force;
+            force.x = 0;
+            force.y = forceY;
+            //rigidbody2D // 낙하중 -> 멈추고 나서 -> 힘을 줘야지 force적용됨 ㅇㅇ
+            rigidbody2D.velocity = Vector2.zero;// new Vector2(0, 0);
+            rigidbody2D.AddForce(force);
+>>>>>>> fa82e3b8cc7d0c30caf263899d847c48a4329e66
 
                 //날개 펄럭이는 애니메이션 하자.
                 animator.Play("Flap", 0, 0);

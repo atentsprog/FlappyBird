@@ -18,15 +18,18 @@ public class Bird : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            Vector2 force;
-            force.x = 0;
-            force.y = forceY;
-            //rigidbody2D // 낙하중 -> 멈추고 나서 -> 힘을 줘야지 force적용됨
-            rigidbody2D.velocity = Vector2.zero;// new Vector2(0, 0);
-            rigidbody2D.AddForce(force);
+            if (Time.time > 0.7f)
+            {
+                Vector2 force;
+                force.x = 0;
+                force.y = forceY;
+                //rigidbody2D // 낙하중 -> 멈추고 나서 -> 힘을 줘야지 force적용됨
+                rigidbody2D.velocity = Vector2.zero;// new Vector2(0, 0);
+                rigidbody2D.AddForce(force);
 
-            //날개 펄럭이는 애니메이션 하자.
-            animator.Play("Flap", 0, 0);
+                //날개 펄럭이는 애니메이션 하자.
+                animator.Play("Flap", 0, 0);
+            }
         }
     }
 

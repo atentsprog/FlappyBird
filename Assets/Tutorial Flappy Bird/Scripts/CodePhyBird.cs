@@ -15,25 +15,27 @@ public class CodePhyBird : Bird
     }
 
     public float acceleration;
-    public float addForce = 1f;
-    
+
     void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        {
+            if (Time.time > 0.7f) // 게임 시작하고 0.7초 안의 클릭은 무시, 시작 직전에 눌렀던 클릭이벤트가 실행되는것을 방지
+            {
+                acceleration = force;
+                animator.Play("Flap", 0, 0);
+            }
+        }
+    }
+
+    // 프레임이 달라도 점프하는 높이가 같도록 FixedUpdate로 로직 이동.
+    private void FixedUpdate()
     {
         if (Time.timeScale == 0)
             return;
 
         //가속도 acceleration
-        acceleration += gravity * Time.deltaTime;
+        acceleration += gravity * Time.fixedDeltaTime;
         transform.Translate(0, acceleration, 0);
-        
-
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Time.time > 0.7f) // 게임 시작하고 0.7초 안의 클릭은 무시, 시작 직전에 눌렀던 클릭이벤트가 실행되는것을 방지
-            {
-                acceleration = addForce;
-                animator.Play("Flap", 0, 0);
-            }
-        }
     }
 }

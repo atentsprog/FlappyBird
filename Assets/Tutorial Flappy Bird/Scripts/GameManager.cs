@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     internal static GameManager instance;
+    public float scrollSpeedMultiply = 1;
 
     int score = 0;
     internal void AddScore()

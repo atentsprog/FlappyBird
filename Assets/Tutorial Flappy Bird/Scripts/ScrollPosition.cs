@@ -12,6 +12,11 @@ public class ScrollPosition : MonoBehaviour
         Items.Add(this);
     }
 
+    private void Start()
+    {
+        speed *= GameManager.instance.scrollSpeedMultiply;
+    }
+
     private void OnDestroy()
     {
         //Debug.Log(name + "ªË¡¶µ ");

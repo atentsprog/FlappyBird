@@ -8,9 +8,11 @@ public class Bird : MonoBehaviour
     public float force = 1f;
     private Vector3 originalPos;
     public Animator animator;
+    new public Rigidbody2D rigidbody2D;
 
-    private void Start()
+    protected void Start()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         originalPos = transform.position;
 
         GameManager.instance.ShowGameOver(false);
@@ -23,9 +25,8 @@ public class Bird : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            var rd = GetComponent<Rigidbody2D>();
-            rd.velocity = Vector3.zero;
-            rd.AddForce(new Vector2(0, force));
+            rigidbody2D.velocity = Vector3.zero;
+            rigidbody2D.AddForce(new Vector2(0, force));
 
             animator.Play("Flap", 0, 0);
         }
@@ -41,5 +42,6 @@ public class Bird : MonoBehaviour
 
         ScrollPosition.Items.ForEach(x => x.enabled = false);
 
+        rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 }

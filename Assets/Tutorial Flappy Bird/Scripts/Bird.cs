@@ -7,7 +7,7 @@ public class Bird : MonoBehaviour
 {
     new public Rigidbody2D rigidbody2D;
     public Animator animator;
-    void Start()
+    public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -35,6 +35,7 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.LogWarning(collision);
         // 새죽음.
         //죽는 애니메이션 하자.
 

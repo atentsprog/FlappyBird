@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +11,11 @@ public class RePosition : MonoBehaviour
     {
         var spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         width = spriteRenderer.sprite.bounds.size.x * transform.lossyScale.x;
-        //minX = -width;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // ÃÖÀú À§Ä¡º¸´Ù µÚ·Î °¬´Ù¸é ¾ÕÀ¸·Î ÀÌµ¿½ÃÅ°±â
+        // ìµœì € ìœ„ì¹˜ë³´ë‹¤ ë’¤ë¡œ ê°”ë‹¤ë©´ ì•ìœ¼ë¡œ ì´ë™ì‹œí‚¤ê¸°
         if (transform.position.x < minX)
         {
             transform.Translate(width * 2, 0, 0);

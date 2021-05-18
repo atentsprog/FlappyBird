@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{3C80D412-C65E-2EAD-940A-F31119B166F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -60,18 +59,19 @@
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
     <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
-    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
-    <Compile Include="Assets\Scripts\Common\TimeController.cs" />
-    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
-    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollX.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RePosition.cs" />
+    <Compile Include="Assets\Scripts\Common\TimeController.cs" />
+    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
+    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnSpawner.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RePosition.cs" />
+    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\CodePhyBird.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
-    <None Include="Assets\Free Asset - 2D Handcrafted Art\Readme.txt" />
+     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
+     <None Include="Assets\Free Asset - 2D Handcrafted Art\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>

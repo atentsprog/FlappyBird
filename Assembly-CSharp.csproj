@@ -58,7 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollPosition.cs" />
+    <Compile Include="Assets\Scripts\Common\ScrollPosition.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Column.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnManager.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Reposition.cs" />

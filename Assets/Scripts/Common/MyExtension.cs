@@ -1,11 +1,11 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
 /// <summary>
-/// È®ÀåÇÔ¼ö »ùÇÃ, ÇÔ¼ö ÀÌ¸§Àº Áß¿äÇÏÁö ¾ÊÀ½.
+/// í™•ì¥í•¨ìˆ˜ ìƒ˜í”Œ, í•¨ìˆ˜ ì´ë¦„ì€ ì¤‘ìš”í•˜ì§€ ì•ŠìŒ.
 /// </summary>
 static public class MyExtension
 {
@@ -15,13 +15,13 @@ static public class MyExtension
     }
 
     /// <summary>
-    /// °æ·Î¸¦ ¸®ÅÏÇÏ´Â ÇÔ¼ö
+    /// ê²½ë¡œë¥¼ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜
     /// </summary>
     /// <param name="t"></param>
     /// <returns></returns>
     static public string GetPath(this Transform t)
     {
-        // ºÎ¸ğ°¡ ÀÖÀ¸¸é ºÎ¸ğ °æ·Î¿Í °æ·Î ±¸ºĞÀÚ¸¦ ³Ö´Â´Ù.
+        // ë¶€ëª¨ê°€ ìˆìœ¼ë©´ ë¶€ëª¨ ê²½ë¡œì™€ ê²½ë¡œ êµ¬ë¶„ìë¥¼ ë„£ëŠ”ë‹¤.
         StringBuilder sb = new StringBuilder();
         GetParentPath(t, sb);
         return sb.ToString();

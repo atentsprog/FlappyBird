@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,7 @@ public class ScrollPosition : MonoBehaviour
 
     private void Awake()
     {
-        //Debug.Log(name + "»ı¼ºµÊ");
+        //Debug.Log(name + "ìƒì„±ë¨");
         Items.Add(this);
     }
 
@@ -19,16 +19,16 @@ public class ScrollPosition : MonoBehaviour
 
     private void OnDestroy()
     {
-        //Debug.Log(name + "»èÁ¦µÊ");
+        //Debug.Log(name + "ì‚­ì œë¨");
         Items.Remove(this);
     }
 
 
-    public float speed = -1f; // 1ÃÊ¿¡ ÇÑÄ­ ¿ŞÂÊÀ¸·Î ÀÌµ¿.
+    public float speed = -1f; // 1ì´ˆì— í•œì¹¸ ì™¼ìª½ìœ¼ë¡œ ì´ë™.
 
     void Update()
     {
-        // ½ºÅ©·Ñ °¡·Î ÀÌµ¿.
+        // ìŠ¤í¬ë¡¤ ê°€ë¡œ ì´ë™.
         transform.Translate(speed * Time.deltaTime, 0, 0);
     }
 }

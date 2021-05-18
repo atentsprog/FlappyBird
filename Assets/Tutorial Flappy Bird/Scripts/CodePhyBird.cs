@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +6,10 @@ public class CodePhyBird : Bird
 {
     new void Start()
     {
-        // ºÎ¸ðÇÔ¼öÀÇ StartÈ£Ãâ
+        // ë¶€ëª¨í•¨ìˆ˜ì˜ Startí˜¸ì¶œ
         base.Start();
 
-        // ÄÚµå·Î ÇØÁÖ°Å³ª ÀÎ½ºÆåÅÍ¸¦ ¼öÁ¤ÇÏ°Å³ª
+        // ì½”ë“œë¡œ í•´ì£¼ê±°ë‚˜ ì¸ìŠ¤íŽ™í„°ë¥¼ ìˆ˜ì •í•˜ê±°ë‚˜
         rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
         rigidbody2D.useFullKinematicContacts = true;
     }
@@ -22,14 +22,14 @@ public class CodePhyBird : Bird
         if (Time.timeScale == 0)
             return;
 
-        //°¡¼Óµµ acceleration
+        //ê°€ì†ë„ acceleration
         acceleration += gravity * Time.deltaTime;
         transform.Translate(0, acceleration, 0);
         
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            if (Time.time > 0.7f) // °ÔÀÓ ½ÃÀÛÇÏ°í 0.7ÃÊ ¾ÈÀÇ Å¬¸¯Àº ¹«½Ã, ½ÃÀÛ Á÷Àü¿¡ ´­·¶´ø Å¬¸¯ÀÌº¥Æ®°¡ ½ÇÇàµÇ´Â°ÍÀ» ¹æÁö
+            if (Time.time > 0.7f) // ê²Œìž„ ì‹œìž‘í•˜ê³  0.7ì´ˆ ì•ˆì˜ í´ë¦­ì€ ë¬´ì‹œ, ì‹œìž‘ ì§ì „ì— ëˆŒë €ë˜ í´ë¦­ì´ë²¤íŠ¸ê°€ ì‹¤í–‰ë˜ëŠ”ê²ƒì„ ë°©ì§€
             {
                 acceleration = addForce;
                 animator.Play("Flap", 0, 0);

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +11,6 @@ public class ChangeTextureOffset : MonoBehaviour
         material = GetComponent<Renderer>().material;
     }
 
-    // Update is called once per frame
     void Update()
     {
         var offset = material.mainTextureOffset;

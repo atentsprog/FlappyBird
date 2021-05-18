@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -22,10 +22,10 @@ public class ColumnManager : MonoBehaviour
     {
         while(GameManager.instance.gameover == false)
         {
-            // µîÀå ½ÃÅ³ Æ®·¦ ¼±ÅÃ.
+            // ë“±ì¥ ì‹œí‚¬ íŠ¸ë© ì„ íƒ.
             TrapInfo newTrap = GetNewTrapInfo();
 
-            // ±âµÕ ½ºÆù(»ı¼º).
+            // ê¸°ë‘¥ ìŠ¤í°(ìƒì„±).
             Instantiate(newTrap.trap, new Vector3(spawnX, Random.Range(spawnYmin, spawnYmax), 0), newTrap.trap.transform.rotation);
 
             yield return new WaitForSeconds(spawnDelay + Random.Range(-spawnDelayRandom, spawnDelayRandom));
@@ -34,12 +34,12 @@ public class ColumnManager : MonoBehaviour
 
     private TrapInfo GetNewTrapInfo()
     {
-        //È®·üÀÌ Àû¿ëµÇÁö ¾ÈÀº ¹öÀü.
+        //í™•ë¥ ì´ ì ìš©ë˜ì§€ ì•ˆì€ ë²„ì „.
         //int selectedIndex = Random.Range(0, traps.Count);
         //return traps[selectedIndex];
 
 
-        // È®·ü Àû¿ëÇÑ ¹öÀü.
+        // í™•ë¥  ì ìš©í•œ ë²„ì „.
         float allRatio = traps.Sum(x => x.ratio);
         float randomRatio = Random.Range(0, allRatio);
 
@@ -50,7 +50,7 @@ public class ColumnManager : MonoBehaviour
             if (sumRatio > randomRatio)
                 return item;
         }
-        Debug.Assert(false, $"¿©±â ¿À¸é ¾ÈµÊ sumRatio:{sumRatio}, randomRatio:{randomRatio}");
+        Debug.Assert(false, $"ì—¬ê¸° ì˜¤ë©´ ì•ˆë¨ sumRatio:{sumRatio}, randomRatio:{randomRatio}");
         return null;
     }
 }

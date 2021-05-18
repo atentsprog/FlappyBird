@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,8 +34,8 @@ public class Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Ãæµ¹ " + collision.transform.name);
-        enabled = false; // Update ÇÔ¼ö ¹İº¹À» ¸ØÃã.
+        //Debug.Log("ì¶©ëŒ " + collision.transform.name);
+        enabled = false; // Update í•¨ìˆ˜ ë°˜ë³µì„ ë©ˆì¶¤.
         animator.Play("Die", 0, 0);
 
         GameManager.instance.ShowGameOver(true);

@@ -362,5 +362,7 @@ MigrationBackup/
 FodyWeavers.xsd
 /Library
 /Temp
-/*.csproj
-/*.sln
+/Build
+*.csproj
+*.*.csproj
+*.sln

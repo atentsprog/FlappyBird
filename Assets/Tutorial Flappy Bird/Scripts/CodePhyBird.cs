@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CodePhyBird : Bird
 {
-    new void Start()
+    private new void Start()
     {
         // 부모함수의 Start호출
         base.Start();
@@ -16,7 +16,7 @@ public class CodePhyBird : Bird
 
     public float acceleration;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {

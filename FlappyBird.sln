@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E3EF6E53-88BE-20EB-65C7-C65330B49779}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tayx.Graphy", "Tayx.Graphy.csproj", "{0AD74512-7942-46A6-2224-DFBF79A57A2F}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{8D77353F-CBDB-13B2-466C-3FFE38CDFEE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.Player.csproj", "{3C80D412-C65E-2EAD-940A-F31119B166F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tayx.Graphy.Editor", "Tayx.Graphy.Editor.csproj", "{5C2D19B3-F88B-569D-E727-00025697B27B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88932B6C-B0D6-4FF1-9FD9-031F1E54B6A6}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,14 +24,18 @@ Global
 		{E3EF6E53-88BE-20EB-65C7-C65330B49779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3EF6E53-88BE-20EB-65C7-C65330B49779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3EF6E53-88BE-20EB-65C7-C65330B49779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD74512-7942-46A6-2224-DFBF79A57A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD74512-7942-46A6-2224-DFBF79A57A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD74512-7942-46A6-2224-DFBF79A57A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD74512-7942-46A6-2224-DFBF79A57A2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D77353F-CBDB-13B2-466C-3FFE38CDFEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D77353F-CBDB-13B2-466C-3FFE38CDFEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D77353F-CBDB-13B2-466C-3FFE38CDFEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D77353F-CBDB-13B2-466C-3FFE38CDFEE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C80D412-C65E-2EAD-940A-F31119B166F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C80D412-C65E-2EAD-940A-F31119B166F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C80D412-C65E-2EAD-940A-F31119B166F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C80D412-C65E-2EAD-940A-F31119B166F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C2D19B3-F88B-569D-E727-00025697B27B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2D19B3-F88B-569D-E727-00025697B27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2D19B3-F88B-569D-E727-00025697B27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2D19B3-F88B-569D-E727-00025697B27B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

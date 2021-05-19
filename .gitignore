@@ -363,3 +363,6 @@ FodyWeavers.xsd
 /Library
 /Temp
 /Build
+*.csproj
+*.*.csproj
+*.sln

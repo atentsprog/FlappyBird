@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ColumnPool : MonoBehaviour 
 {
@@ -9,52 +10,61 @@ public class ColumnPool : MonoBehaviour
 	public float columnMin = -1f;									//Minimum y value of the column position.
 	public float columnMax = 3.5f;									//Maximum y value of the column position.
 
-	private GameObject[] columns;									//Collection of pooled columns.
+	public  List<GameObject> columns;									//Collection of pooled columns.
 	private int currentColumn = 0;									//Index of the current column in the collection.
 
 	private Vector2 objectPoolPosition = new Vector2 (-15,-25);		//A holding position for our unused columns offscreen.
 	private float spawnXPosition = 10f;
 
-	private float timeSinceLastSpawned;
 
-
-	void Start()
+	IEnumerator Start()
 	{
-		timeSinceLastSpawned = 0f;
-
-		//Initialize the columns collection.
-		columns = new GameObject[columnPoolSize];
-		//Loop through the collection... 
-		for(int i = 0; i < columnPoolSize; i++)
+		for(int i = 0; i < 5; i++)
 		{
-			//...and create the individual columns.
-			columns[i] = (GameObject)Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity);
+			columns.Add(Instantiate(columnPrefab, objectPoolPosition, Quaternion.identity));
 		}
-	}
 
-
-	//This spawns columns as long as the game is not over.
-	void Update()
-	{
-		timeSinceLastSpawned += Time.deltaTime;
-
-		if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) 
-		{	
-			timeSinceLastSpawned = 0f;
-
-			//Set a random y position for the column
+		GameControl.instance.gameOver = false;
+		while (GameControl.instance.gameOver == false)
+		{
 			float spawnYPosition = Random.Range(columnMin, columnMax);
-
-			//...then set the current column to that position.
 			columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
-
-			//Increase the value of currentColumn. If the new size is too big, set it back to zero
-			currentColumn ++;
-
-			if (currentColumn >= columnPoolSize) 
+			
+			
+			currentColumn++;
+			//최대 인덱스 크기 넘어가면 다시 첫번째 인덱스부터 위치 이동되도록 인덱스 0으로 수정
+			if (currentColumn >= columns.Count)
 			{
 				currentColumn = 0;
 			}
+
+			yield return new WaitForSeconds(spawnRate);
 		}
 	}
+
+
+	////This spawns columns as long as the game is not over.
+	//void Update()
+	//{
+	//	timeSinceLastSpawned += Time.deltaTime;
+
+	//	if (GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate) 
+	//	{	
+	//		timeSinceLastSpawned = 0f;
+
+	//		//Set a random y position for the column
+	//		float spawnYPosition = Random.Range(columnMin, columnMax);
+
+	//		//...then set the current column to that position.
+	//		columns[currentColumn].transform.position = new Vector2(spawnXPosition, spawnYPosition);
+
+	//		//Increase the value of currentColumn. If the new size is too big, set it back to zero
+	//		currentColumn ++;
+
+	//		if (currentColumn >= columnPoolSize) 
+	//		{
+	//			currentColumn = 0;
+	//		}
+	//	}
+	//}
 }

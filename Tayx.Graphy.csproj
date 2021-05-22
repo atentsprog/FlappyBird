@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E3EF6E53-88BE-20EB-65C7-C65330B49779}</ProjectGuid>
+    <ProjectGuid>{0AD74512-7942-46A6-2224-DFBF79A57A2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Tayx.Graphy</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -56,17 +56,32 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Common\EditorOption.cs" />
-    <Compile Include="Assets\Scripts\Common\EditorButtonHelper.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Column.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnPool.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RepeatingBackground.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameControl.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollingObject.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\GraphyManager.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioText.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioGraph.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\UI\IMovable.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Graph\G_Graph.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamManager.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioManager.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\UI\IModifiableState.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_FloatString.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Shader\G_GraphShader.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\GraphyDebugger.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Advanced\G_AdvancedData.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Singleton.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsManager.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_Intstring.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Util\G_ExtensionMethods.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamText.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Audio\G_AudioMonitor.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamGraph.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsMonitor.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsText.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Ram\G_RamMonitor.cs" />
+    <Compile Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Fps\G_FpsGraph.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
+     <None Include="Assets\Graphy - Ultimate Stats Monitor\Runtime\Tayx.Graphy.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -288,6 +303,15 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -634,29 +658,8 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>D:\Program Files\Unity\2020.3.5f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>

@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
     public Text scoreUI;
     Text highScoreText;
     int highScore; // 최고 점수 저장. 게임 시작되면 초기화, 게임중 점수 넘기면 ui와 함게 갱신.
-
     int HighScore
     {
         set
@@ -37,11 +36,10 @@ public class GameManager : MonoBehaviour
         instace = this;
         ShowGameOver(false);
         int highScore = PlayerPrefs.GetInt("HighScore");
-        HighScore = highScore;
-        //SetHighScore(highScore);
+        HighScore = highScore;  // 속성
+        //SetHighScore(highScore); // 함수
     }
-
-    // 함수.
+    // 함수 버전 사용안함.
     void SetHighScore(int _highScore)
     {
         highScore = _highScore;
@@ -49,10 +47,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("HighScore", highScore);
         PlayerPrefs.Save();
     }
-
-    // 속성.
-
-
     bool isGameOver;// = false;// ?
     internal void SetGameOver()
     {

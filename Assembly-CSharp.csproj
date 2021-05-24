@@ -56,21 +56,23 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
-    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
-    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\Bird.cs" />
-    <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
-    <Compile Include="Assets\Scripts\Common\TimeController.cs" />
-    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
     <Compile Include="Assets\FixedUpdateTest\Move.cs" />
+    <Compile Include="Assets\Scripts\Common\GOHelper.cs" />
+    <Compile Include="Assets\Scripts\Common\MyExtension.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollX.cs" />
+    <Compile Include="Assets\Scripts\Common\TimeController.cs" />
     <Compile Include="Assets\FixedUpdateTest\FixedUpdateTest.cs" />
     <Compile Include="Assets\Scripts\Common\ListItemMonobehaviour.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnSpawner.cs" />
+    <Compile Include="Assets\Scripts\Common\GODestroyer.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\CodePhyBird.cs" />
-    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ScrollX.cs" />
+    <Compile Include="Assets\Scripts\Common\GORotate.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\ColumnSpawner.cs" />
+    <Compile Include="Assets\Tutorial Flappy Bird\Scripts\GameManager.cs" />
     <Compile Include="Assets\Tutorial Flappy Bird\Scripts\RePosition.cs" />
+    <Compile Include="Assets\Scripts\Common\ChangeTextureOffset.cs" />
+    <Compile Include="Assets\Scripts\Common\EditorOption.cs" />
+    <Compile Include="Assets\Scripts\Common\EditorButtonHelper.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Graphy - Ultimate Stats Monitor\Changelog.txt" />
@@ -292,9 +294,6 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -661,9 +660,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>

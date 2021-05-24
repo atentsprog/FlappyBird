@@ -13,14 +13,45 @@ public class GameManager : MonoBehaviour
     static public GameManager instace;
 
     public GameObject gameOverUI;
-    public Text scoreUI;
     public float scrollSpeedXMultiply = 1;
 
+    public Text scoreUI;
+    Text highScoreText;
+    int highScore; // 최고 점수 저장. 게임 시작되면 초기화, 게임중 점수 넘기면 ui와 함게 갱신.
+
+    int HighScore
+    {
+        set
+        {
+            highScore = value;
+            if(highScoreText == null)
+                highScoreText = GameObject.Find("Canvas").transform.Find("HighScore").GetComponent<Text>();
+
+            highScoreText.text = $"High Score : {highScore.ToNumber()}";
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save();
+        }
+    }
     private void Awake()
     {
         instace = this;
         ShowGameOver(false);
+        int highScore = PlayerPrefs.GetInt("HighScore");
+        HighScore = highScore;
+        //SetHighScore(highScore);
     }
+
+    // 함수.
+    void SetHighScore(int _highScore)
+    {
+        highScore = _highScore;
+        highScoreText.text = $"High Score : {highScore.ToNumber()}";///1
+        PlayerPrefs.SetInt("HighScore", highScore);
+        PlayerPrefs.Save();
+    }
+
+    // 속성.
+
 
     bool isGameOver;// = false;// ?
     internal void SetGameOver()
@@ -51,6 +82,12 @@ public class GameManager : MonoBehaviour
     {
         score += 100;
         scoreUI.text = "Score : " + score;
+
+        if(score > highScore)
+        {
+            HighScore = score;
+            //SetHighScore(score);
+        }
     }
 
 }

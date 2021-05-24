@@ -40,7 +40,6 @@ public class Bird : MonoBehaviour
 
     protected void OnDie(Collision2D collision)
     {
-        Debug.LogWarning(collision);
         // 새죽음.
 
         //게임 오버 UI표시
